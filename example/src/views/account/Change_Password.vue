@@ -3,25 +3,48 @@
     <form action>
       <div class="form_a">
         <label for="currentpassword">当前密码</label>
-        <input type="text" id="currentpassword" placeholder="当前使用的密码">
+        <input type="password" id="currentpassword" placeholder="当前使用的密码" v-model="currentpassword">
       </div>
       <div class="form_a">
         <label for="setpassword">设置密码</label>
-        <input type="text" id="setpassword" placeholder="您要使用的新密码">
+        <input type="password" id="setpassword" placeholder="您要使用的新密码" v-model="setpassword">
       </div>
       <div class="form_a">
         <label for="confirmassword">设置密码</label>
-        <input type="text" id="confirmassword" placeholder="您要使用的新密码">
+        <input type="password" id="confirmassword" placeholder="您要使用的新密码" v-model="confirmassword">
       </div>
       <div class="set-value">
-        <span>确认修改</span>
+        <span @click="set_value"style="cursor:pointer">确认修改</span>
       </div>
     </form>
   </div>
 </template>
 <script>
 export default {
-
+  data() {
+    return {
+      currentpassword:'',
+      setpassword:'',
+      confirmassword:'',
+    }
+  },
+  methods:{
+       set_value(){
+        console.log(1)
+          if(this.setpassword===this.confirmassword){
+            console.log("密码一致")
+          this.$axios.post("/user/updatePwd",{
+              id:'',
+              oldPwd:this.currentpassword,
+              newPwd:this.confirmassword,
+        }).then(res => {
+        if(data.ok=1){
+              alert("修改成功")
+        }
+      });
+    }
+    }
+  }
 };
 </script>
 <style scoped>

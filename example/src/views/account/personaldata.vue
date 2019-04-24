@@ -9,28 +9,119 @@
                 <li>签名</li>
             </ul>
             <div id="square"></div>
-            <p class="jpg">仅支持jpg/png文件</p>
-            <input type="radio" class="boy">          
+            <p class="jpg">
+            <el-upload
+            class="avatar-uploader"
+            action="/haha"
+            :show-file-list="false"
+            name="shopTypePic"
+            :on-success="handleAvatarSuccess"
+            :before-upload="beforeAvatarUpload">
+           
+            <img v-if="imageUrl" :src="imageUrl" class="avatar">
+            <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+            </el-upload></p>
+            
+            <input type="radio"checked="checked" class="boy"  name="1" v-model="sex" value="1">     
             <p class="p1">男士</p>
-            <input type="radio" class="girl">
+            <input type="radio"  class="girl"  name="1" v-model="sex" value="2">
             <p class="p2">女士</p>
-            <input type="text" class="year">          
+            <input type="text" class="year" v-model="year">          
             <p class="p3">年</p>
-            <input type="text" class="month">          
+            <input type="text" class="month" v-model="month">          
             <p class="p4">月</p>
-            <input type="text" class="data">           
+            <input type="text" class="data" v-model="data">           
             <p class="p5">日</p>
-            <input type="text" placeholder="请输入您的手机号" class="inp1">
-            <input type="text" placeholder="请输入您的邮箱" class="inp2">
-            <input type="text" placeholder="请输入您的签名" class="inp3">
-            <div class="modify">保存修改</div>
+            <input type="text" placeholder="请输入您的手机号" class="inp1" v-model="number">
+            <input type="text" placeholder="请输入您的邮箱" class="inp2" v-model="mailbox">
+            <input type="text" placeholder="请输入您的签名" class="inp3"v-model="autograph">
+            <div class="modify" @click="Preservation">保存修改</div>
         </div>
 
 </template>
 <script>
 export default {
-    
-}
+      data() {
+       var numberz = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
+       var mailboxz = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/
+      return {
+        imageUrl: '',
+         sex:1,
+         year:'',//年
+         month:'',//元
+         data:'',//日
+         number:'',//手机号
+         mailbox:'',//邮箱
+         autograph:'',//签名
+
+      };
+    },
+    methods: {
+      handleAvatarSuccess(res, file) {
+        this.imageUrl = URL.createObjectURL(file.raw);
+         console.log(this.imageUrl)
+      },
+      beforeAvatarUpload(file) {
+        const isJPG = file.type === 'image/jpeg';
+        const isLt2M = file.size / 1024 / 1024 < 2;
+
+        if (!isJPG) {
+          this.$message.error('上传头像图片只能是 JPG 格式!');
+        }
+        if (!isLt2M) {
+          this.$message.error('上传头像图片大小不能超过 2MB!');
+        }
+        return isJPG && isLt2M;
+      },
+      Preservation(){
+           var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
+           var myree = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            if (myreg.test(this.number)) {
+                console.log(this.number)
+                if (myree.test(this.mailbox)) {
+                    this.$axios
+                    .post("/user/updateStudent", {
+                        number:"",//学号
+                        username:'',//用户名
+                        nickname:"",//用户昵称
+                        phone:this.number,//用户手机号
+                        email:this.mailbox,//用户邮箱
+                        sex:this.sex,//用户性别
+                        birthday:this.year/this.month/this.data,//用户出生年月
+                        autograph:this.autograph
+                    })
+                    .then(res => {
+                        if(data.ok=1){
+                              alert("修改成功")
+                        }
+                    });
+                }else{
+                    return false;
+                    alert("邮箱不正确")
+                }
+            } else {
+                alert("手机号不正确")
+                 return false;
+            }
+        this.$axios
+          .post("/user/updateStudent", {
+                number:"",//学号
+                username:'',//用户名
+                nickname:"",//用户昵称
+                phone:this.number,//用户手机号
+                email:this.mailbox,//用户邮箱
+                sex:this.sex,//用户性别
+                birthday:this.year/this.month/this.data,//用户出生年月
+                autograph:this.autograph
+          })
+          .then(res => {
+            console.log(res);
+          });
+      }
+    },
+    mounted() {
+    },
+  }
 </script>
     <style scoped>
         *{
@@ -184,5 +275,9 @@ export default {
         }
         #account .modify:hover{
             background: #929292;
+        }
+        #account .jpg[data-v-552133a6]{
+            left: 170px;
+            top: 78px;
         }
     </style>   
