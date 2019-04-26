@@ -73,6 +73,67 @@
     </footer>
   </div>
 </template>
+<script>
+  export default {
+    data() {
+      return {
+        phone: "",
+        pwd: "",
+        isShow: false,
+        tips: "",
+        imgUrl: "",
+        yzm: "",
+        checkbox: false
+      };
+    },
+    methods: {
+      fn() {
+        // if(this.phone)
+
+        var phoneRegular = /^[1][3,4,5,7,8][0-9]{9}$/; //手机号正则
+        var emailRegular = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/; //邮箱正则
+        var pwdRegular = /^.*(?=.{6,})(?=.*\d)(?=.*[a-z]).*$/;
+        if (phoneRegular.test(this.phone) || phoneRegular.test(this.phone)) {
+          if (pwdRegular.test(this.pwd)) {
+            if (this.checkbox) {
+              this.$axios
+                .get("/haha", {
+                  params: {
+                    a: 1,
+                    b: 2
+                  }
+                })
+                .then(res => {
+                  this.imgUrl = res.url;
+                  if (res.ok === 1) {
+                    localStorage.userInfo = {
+                      headPortrait: res.touxiang,
+                      StudentID: res.xuehao,
+                      nickname: res.yonghunicheng,
+                      userName: res.yonghuming
+                    };
+                    this.$router.push("/");
+                  }
+                });
+            } else {
+              this.tips = "请同意注册协议";
+              this.isShow = !this.isShow;
+            }
+          } else {
+            this.tips = "密码最少六位，包含数字和字母！";
+            this.isShow = !this.isShow;
+          }
+        } else {
+          this.isShow = !this.isShow;
+          this.tips = "请输入正确的手机号或者邮箱！";
+        }
+      }
+    }
+    // mounted() {
+    //   this.yzm = this.imgUrl ? "" : "验证码";
+    // }
+  };
+</script>
 <style scoped>
   @charset "utf-8";
   body,
@@ -160,7 +221,7 @@
     margin-left: 38px;
   }
   .contentwarp {
-    background: #4B63AE;
+    background: #4b63ae;
   }
   .login-header .nav ul li:hover a {
     background: #5f81e6;
@@ -173,7 +234,7 @@
     width: 1300px;
     margin: 0 auto;
     background: url(../../static/img/img/1111.png) no-repeat;
-     background-position: 20px;
+    background-position: 20px;
   }
   .contentwarp .contentinner .registerbox {
     position: absolute;
@@ -181,8 +242,7 @@
     left: 684px;
     width: 562px;
     min-height: 200px;
-    background: #4B63B7;
-    
+    background: #4b63b7;
   }
   .registerbox .title {
     text-align: center;
@@ -209,7 +269,7 @@
     outline: none;
     border: 0;
     padding-left: 20px;
-    background: #4B63B7;
+    background: #4b63b7;
     color: #fff;
   }
   .userInfoinner span {
@@ -232,7 +292,7 @@
     outline: none;
     border: 0;
     padding-left: 20px;
-    background: #4B63B7;
+    background: #4b63b7;
     color: #fff;
     float: left;
     margin-top: 20px;
@@ -261,7 +321,7 @@
     height: 62px;
     text-align: center;
     font-size: 24px;
-    background: #4B63B7;
+    background: #4b63b7;
     outline: 0;
     border: none;
     color: #fff;

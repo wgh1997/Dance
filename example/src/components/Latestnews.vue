@@ -1,6 +1,6 @@
 <template>
   <div class="Latestnews">
-    <h3>最新消息</h3>
+    <h3 @click="$router.push('/LatestNews')">最新消息</h3>
     <p>zui xin xiao xi</p>
     <div class="Latestnews_introduce">
       <div class="introduce_left">
@@ -103,6 +103,7 @@
     color: rgba(33, 33, 33, 1);
     margin: 0 auto;
     padding: 110px 0 15px 0;
+    cursor: pointer;
   }
   .Latestnews p {
     height: 17px;

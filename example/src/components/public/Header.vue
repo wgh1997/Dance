@@ -6,7 +6,7 @@
       <div id="head-menu-3"></div>
     </div>
     <ul class="nav">
-      <li id="index">首页</li>
+      <li id="index" @click="$router.push('/')">首页</li>
       <li @click="$router.push('/Personal')">个人中心</li>
       <li>联系我们</li>
       <li @click="$router.push('/register')">注册</li>
