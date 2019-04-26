@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Header></Header>
   <div class="content">
     <div class="list">
       <ul>
@@ -32,7 +33,7 @@
             <img src="" alt="">
           </div>
          <span>
-            <router-link to="/">消息列表</router-link>
+            <router-link to="/newsList">消息列表</router-link>
           </span>
         </li>
         <li>
@@ -40,7 +41,7 @@
             <img src="" alt="">
           </div>
           <span>
-            <router-link to="/">我的收藏</router-link>
+            <router-link to="/shoucang">我的收藏</router-link>
           </span>
         </li>
          <li>
@@ -48,29 +49,26 @@
             <img src="" alt="">
           </div>
           <span>
-            <router-link to="/">个人云盘</router-link>
+            <router-link to="/cloud">个人云盘</router-link>
           </span>
-        </li>
-         <li>
-           <div class="icon">
-            <img src="" alt="">
-          </div>
-          <span>
-            <router-link to="/">个人论坛</router-link>
-          </span>
-        </li>
+        </li>    
       </ul>
     </div>
     <div class="option">
        <router-view></router-view>
       </div>
     </div> 
-  </div> 
+    <Footer></Footer>
+  </div>
 </template>
-
 <script>
+import Header from "../components/public/Header.vue"; //头部
+import Footer from "../components/public/Footer"; //尾部
 export default {
-  name: 'home',
+  components:{
+    Header,
+    Footer
+  }
 }
 </script>
 <style scoped>
@@ -79,7 +77,6 @@ export default {
     padding:0;
   }
   .home{
-     width:1300px;
     background:rgba(194,194,194,1);
   }
   .content{
@@ -94,19 +91,12 @@ export default {
     background:rgba(242,242,242,1);
     float: left;
         margin: 0px 69px 0px 0;
-    /* position: absolute;
-    left:360px;
-    top:75px; */
   }
   .option{
     width:960px;
     height:674px;
     background:rgba(242,242,242,1);
     float: left;
-    
-    /* position: absolute;
-    left:600px;
-    top:75px; */
   }
   .list li{
     width:210px;
@@ -125,4 +115,3 @@ export default {
     height:100%;
   }
 </style>
-

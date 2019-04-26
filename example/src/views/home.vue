@@ -17,7 +17,7 @@
   import Characteristiccourses from "../components/Characteristic_courses"; //特色课程
   import Latestnews from "../components/Latestnews"; //最新消息
   import Header from "../components/public/Header.vue"; //头部
-  import Slider from "../components/Slider";
+  import Slider from "../components/Slider";//轮播图
   import Footer from "../components/public/Footer"; //尾部
 
   export default {
