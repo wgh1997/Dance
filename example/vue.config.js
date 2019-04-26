@@ -5,7 +5,7 @@ module.exports = {
       open: true,
       proxy: {
         "/exa": {
-          target: "http://127.0.0.1:3000",
+          target: "http://188.131.188.119:7777",
           changeOrigin: true,
           pathRewrite: {
             "^/exa": "/"

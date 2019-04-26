@@ -7,6 +7,7 @@ import Personal from "./views/Personal.vue"; //个人中心
 import curriculum from './views/curriculum'
 import account from './views/account'
 import Order from './views/Order'
+import Characteristic from './views/Characteristic.vue'//特色课程
 
 Vue.use(Router);
 
@@ -45,6 +46,11 @@ export default new Router({
          component:Order,
        }
      ]
-    }
+    },
+    {
+      path: "/Characteristic",
+      name: 'Characteristic',
+      component: Characteristic
+    },
   ]
 });

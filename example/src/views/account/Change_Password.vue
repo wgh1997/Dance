@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form action>
+    <form action id="myForm">
       <div class="form_a">
         <label for="currentpassword">当前密码</label>
         <input type="password" id="currentpassword" placeholder="当前使用的密码" v-model="currentpassword">
@@ -33,14 +33,12 @@ export default {
         console.log(1)
           if(this.setpassword===this.confirmassword){
             console.log("密码一致")
-          this.$axios.post("/user/updatePwd",{
-              id:'',
-              oldPwd:this.currentpassword,
-              newPwd:this.confirmassword,
-        }).then(res => {
-        if(data.ok=1){
-              alert("修改成功")
-        }
+          var formData=new FormData()
+          formData.append("id","1");
+          formData.append("oldPwd",this.currentpassword);
+          formData.append("newPwd",this.confirmassword);
+          this.$axios.post("/user/updatePwd",formData).then(data=> {
+          console.log(data)
       });
     }
     }

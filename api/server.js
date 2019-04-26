@@ -23,9 +23,10 @@ app.post("user/updateStudent", function(req, res) {
 });
 app.post("/user/updatePwd",function (req,res) {
   console.log(1111111)
-  upPic(req,"shopTypePic",function (obj) {
-      res.json(obj);
-  })
+  res.json({
+    ok: 1,
+    msg: "成功"
+  });
 })
 app.listen(3000, function() {
   console.log("success");

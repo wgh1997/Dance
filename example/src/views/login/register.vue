@@ -160,7 +160,7 @@
     margin-left: 38px;
   }
   .contentwarp {
-    background: #5f81e6;
+    background: #4B63AE;
   }
   .login-header .nav ul li:hover a {
     background: #5f81e6;
@@ -172,6 +172,8 @@
     position: relative;
     width: 1300px;
     margin: 0 auto;
+    background: url(../../static/img/img/1111.png) no-repeat;
+     background-position: 20px;
   }
   .contentwarp .contentinner .registerbox {
     position: absolute;
@@ -179,7 +181,8 @@
     left: 684px;
     width: 562px;
     min-height: 200px;
-    background: #4b63ac;
+    background: #4B63B7;
+    
   }
   .registerbox .title {
     text-align: center;
@@ -206,7 +209,7 @@
     outline: none;
     border: 0;
     padding-left: 20px;
-    background: #4b63ac;
+    background: #4B63B7;
     color: #fff;
   }
   .userInfoinner span {
@@ -229,7 +232,7 @@
     outline: none;
     border: 0;
     padding-left: 20px;
-    background: #4b63ac;
+    background: #4B63B7;
     color: #fff;
     float: left;
     margin-top: 20px;
@@ -258,7 +261,7 @@
     height: 62px;
     text-align: center;
     font-size: 24px;
-    background: #4b63ac;
+    background: #4B63B7;
     outline: 0;
     border: none;
     color: #fff;

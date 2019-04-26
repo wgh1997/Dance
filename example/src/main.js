@@ -17,6 +17,7 @@ axios.interceptors.response.use(({ data }) => {
 
 // axios请求拦截
 axios.interceptors.request.use(config => {
+  console.log(config.url)
   config.url = "/exa" + config.url;
   return config;
 });

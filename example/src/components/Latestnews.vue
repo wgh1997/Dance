@@ -140,7 +140,7 @@
     font-weight: bold;
     color: rgba(139, 139, 139, 1);
     float: right;
-    margin: -105px 142px 0 0px;
+    margin: 0px 142px 0 0px;
   }
   .upper a {
     height: 14px;

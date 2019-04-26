@@ -38,7 +38,10 @@
     height: 440px;
     background: rgba(75, 99, 172, 1);
   }
-
+  .el-carousel__item img{
+  width: 100%;
+    height: 100%    
+  }
   #slide {
     width: 100%;
     height: 440px;

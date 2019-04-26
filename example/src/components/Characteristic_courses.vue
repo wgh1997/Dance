@@ -2,7 +2,7 @@
   <div class="Characteristic_courses">
     <div class="Char_bg">
       <div class="Characteristic_courses_content w1180">
-        <h3>特色课程</h3>
+        <h3@click="$router.push('/Characteristic')">特色课程</h3>
         <span>te se ke cheng</span>
         <ul class="content_introduce">
           <li>
@@ -101,7 +101,7 @@
   }
   .content_introduce .img_describe {
     overflow: hidden;
-    width: 264px;
+    width: 245px;
     height: 170px;
   }
   .content_introduce .img_describe img {
@@ -127,7 +127,7 @@
   }
   .content_introduce li {
     float: left;
-    width: 210px;
+    width: 217px;
     height: 410px;
     background: #35467a;
     margin: 0 17px 0 10px;

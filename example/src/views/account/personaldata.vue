@@ -12,16 +12,13 @@
             <p class="jpg">
             <el-upload
             class="avatar-uploader"
-            action="/haha"
+            action="/user/updateHead"
             :show-file-list="false"
-            name="shopTypePic"
             :on-success="handleAvatarSuccess"
             :before-upload="beforeAvatarUpload">
-           
             <img v-if="imageUrl" :src="imageUrl" class="avatar">
             <i v-else class="el-icon-plus avatar-uploader-icon"></i>
             </el-upload></p>
-            
             <input type="radio"checked="checked" class="boy"  name="1" v-model="sex" value="1">     
             <p class="p1">男士</p>
             <input type="radio"  class="girl"  name="1" v-model="sex" value="2">
@@ -37,31 +34,32 @@
             <input type="text" placeholder="请输入您的签名" class="inp3"v-model="autograph">
             <div class="modify" @click="Preservation">保存修改</div>
         </div>
-
 </template>
 <script>
 export default {
-      data() {
-       var numberz = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
-       var mailboxz = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/
-      return {
-        imageUrl: '',
-         sex:1,
-         year:'',//年
-         month:'',//元
-         data:'',//日
-         number:'',//手机号
-         mailbox:'',//邮箱
-         autograph:'',//签名
-
-      };
+    data() {
+        var numberz = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
+        var mailboxz = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/
+        return {
+            imageUrl: '',
+            sex:1,
+            year:'',//年
+            month:'',//元
+            data:'',//日
+            number:'',//手机号
+            mailbox:'',//邮箱
+            autograph:'',//签名
+        };
     },
     methods: {
       handleAvatarSuccess(res, file) {
+          console.log(file)
+          console.log(res)
         this.imageUrl = URL.createObjectURL(file.raw);
          console.log(this.imageUrl)
       },
-      beforeAvatarUpload(file) {
+      beforeAvatarUpload(file){
+          console.log(file)
         const isJPG = file.type === 'image/jpeg';
         const isLt2M = file.size / 1024 / 1024 < 2;
 
@@ -76,24 +74,23 @@ export default {
       Preservation(){
            var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
            var myree = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+           var formData=new FormData()
+            formData.append("id","1");
+            formData.append("number","1");
+            formData.append("username","1");
+            formData.append("nickname","1");
+            formData.append("phone",this.number);
+            formData.append("email",this.mailbox);
+            formData.append("sex",this.sex);
+            formData.append("birthday",this.year+'/'+this.month+'/'+this.data);
+            console.log(formData.get("birthday"))
+            formData.append("autograph",this.autograph);
             if (myreg.test(this.number)) {
                 console.log(this.number)
                 if (myree.test(this.mailbox)) {
-                    this.$axios
-                    .post("/user/updateStudent", {
-                        number:"",//学号
-                        username:'',//用户名
-                        nickname:"",//用户昵称
-                        phone:this.number,//用户手机号
-                        email:this.mailbox,//用户邮箱
-                        sex:this.sex,//用户性别
-                        birthday:this.year/this.month/this.data,//用户出生年月
-                        autograph:this.autograph
-                    })
-                    .then(res => {
-                        if(data.ok=1){
-                              alert("修改成功")
-                        }
+                    this.$axios.post("/user/updateStudent", formData)
+                    .then(data => {
+                        console.log(data)
                     });
                 }else{
                     return false;
@@ -103,20 +100,6 @@ export default {
                 alert("手机号不正确")
                  return false;
             }
-        this.$axios
-          .post("/user/updateStudent", {
-                number:"",//学号
-                username:'',//用户名
-                nickname:"",//用户昵称
-                phone:this.number,//用户手机号
-                email:this.mailbox,//用户邮箱
-                sex:this.sex,//用户性别
-                birthday:this.year/this.month/this.data,//用户出生年月
-                autograph:this.autograph
-          })
-          .then(res => {
-            console.log(res);
-          });
       }
     },
     mounted() {
