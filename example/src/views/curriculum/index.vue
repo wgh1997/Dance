@@ -100,4 +100,7 @@ export default {
     border-bottom: 1px solid #349366;
     display: block;
 }
+.about_head li span{
+    text-align:center;
+}
 </style>
