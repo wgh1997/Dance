@@ -4,15 +4,15 @@
     <div class="box">
       <ul class="list">
         <li>
-          <img src="../static/img/img/1553675245758.png" alt="" />
+          <img src="../assets/img/img/1553675245758.png" alt="" />
           <p>舞蹈发展全新计划，成立最新舞蹈教学方案</p>
         </li>
         <li>
-          <img src="../static/img/img/1553675245758.png" alt="" />
+          <img src="../assets/img/img/1553675245758.png" alt="" />
           <p>独特管理系统</p>
         </li>
         <li>
-          <img src="../static/img/img/1553675245758.png" alt="" />
+          <img src="../assets/img/img/1553675245758.png" alt="" />
           <p>女子天团成立方案</p>
         </li>
       </ul>

@@ -6,7 +6,7 @@
                 <li>
                     <div class="content">
                         <span>
-                            <img src="../../static/img/img/1540450714483.png" alt="">
+                            <img src="../../assets/img/img/1540450714483.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -14,7 +14,7 @@
                 <li>
                     <div class="content">
                         <span>
-                            <img src="../../static/img/img/1540450714483.png" alt="">
+                            <img src="../../assets/img/img/1540450714483.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -22,7 +22,7 @@
                 <li>
                     <div class="content">
                         <span>
-                            <img src="../../static/img/img/1540450714483.png" alt="">
+                            <img src="../../assets/img/img/1540450714483.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -30,7 +30,7 @@
                 <li>
                     <div class="content">
                         <span>
-                            <img src="../../static/img/img/1540450714483.png" alt="">
+                            <img src="../../assets/img/img/1540450714483.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -38,7 +38,7 @@
                 <li>
                     <div class="content">
                         <span>
-                            <img src="../../static/img/img/1540450714483.png" alt="">
+                            <img src="../../assets/img/img/1540450714483.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -46,7 +46,7 @@
                 <li>
                     <div class="content">
                         <span>
-                            <img src="../../static/img/img/1540450714483.png" alt="">
+                            <img src="../../assets/img/img/1540450714483.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -59,7 +59,7 @@
                 <li>
                     <div class="content">
                         <span>
-                            <img src="../../static/img/img/1551778201278.png" alt="">
+                            <img src="../../assets/img/img/1551778201278.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -67,7 +67,7 @@
                 <li>
                     <div class="content">
                         <span>
-                             <img src="../../static/img/img/1551778201278.png" alt="">
+                             <img src="../../assets/img/img/1551778201278.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -75,7 +75,7 @@
                 <li>
                     <div class="content">
                         <span>
-                            <img src="../../static/img/img/1551778201278.png" alt="">
+                            <img src="../../assets/img/img/1551778201278.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -83,7 +83,7 @@
                 <li>
                     <div class="content">
                         <span>
-                            <img src="../../static/img/img/1551778201278.png" alt="">
+                            <img src="../../assets/img/img/1551778201278.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -91,7 +91,7 @@
                 <li>
                     <div class="content">
                         <span>
-                          <img src="../../static/img/img/1551778201278.png" alt="">
+                          <img src="../../assets/img/img/1551778201278.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -99,7 +99,7 @@
                 <li>
                     <div class="content">
                         <span>
-                            <img src="../../static/img/img/1551778201278.png" alt="">
+                            <img src="../../assets/img/img/1551778201278.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -112,7 +112,7 @@
                 <li>
                     <div class="content">
                         <span>
-                            <img src="../../static/img/img/1553675245758.png" alt="">
+                            <img src="../../assets/img/img/1553675245758.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -120,7 +120,7 @@
                 <li>
                     <div class="content">
                         <span>
-                             <img src="../../static/img/img/1553675245758.png" alt="">
+                             <img src="../../assets/img/img/1553675245758.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -128,7 +128,7 @@
                 <li>
                     <div class="content">
                         <span>
-                              <img src="../../static/img/img/1553675245758.png" alt="">
+                              <img src="../../assets/img/img/1553675245758.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -136,7 +136,7 @@
                 <li>
                     <div class="content">
                         <span>
-                            <img src="../../static/img/img/1553675245758.png" alt="">
+                            <img src="../../assets/img/img/1553675245758.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -144,7 +144,7 @@
                 <li>
                     <div class="content">
                         <span>
-                            <img src="../../static/img/img/1553675245758.png" alt="">
+                            <img src="../../assets/img/img/1553675245758.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>
@@ -152,7 +152,7 @@
                 <li>
                     <div class="content">
                         <span>
-                             <img src="../../static/img/img/1553675245758.png" alt="">
+                             <img src="../../assets/img/img/1553675245758.png" alt="">
                         </span>
                         <p>哈啊哈哈哈哈哈哈哈哈哈</p>
                     </div>

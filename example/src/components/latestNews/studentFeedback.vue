@@ -8,7 +8,7 @@
       <div class="container">
         <div class="float">
           <div class="img_box">
-            <img src="../../static/img/img/1551778201278.png" alt="" />
+            <img src="../../assets/img/img/1551778201278.png" alt="" />
           </div>
           <div>
             <ul class="text_list">
@@ -26,7 +26,7 @@
         </div>
         <div class="float">
           <div class="img_box">
-            <img src="../../static/img/img/1551778201278.png" alt="" />
+            <img src="../../assets/img/img/1551778201278.png" alt="" />
           </div>
           <div>
             <ul class="text_list">
@@ -44,7 +44,7 @@
         </div>
         <div class="float">
           <div class="img_box">
-            <img src="../../static/img/img/1551778201278.png" alt="" />
+            <img src="../../assets/img/img/1551778201278.png" alt="" />
           </div>
           <div>
             <ul class="text_list">
@@ -62,7 +62,7 @@
         </div>
         <div class="float">
           <div class="img_box">
-            <img src="../../static/img/img/1551778201278.png" alt="" />
+            <img src="../../assets/img/img/1551778201278.png" alt="" />
           </div>
           <div>
             <ul class="text_list">
@@ -87,7 +87,7 @@
         <ul class="pj_list">
           <li>
             <div class="pj_tx">
-              <img src="../../static/img/img/1552728393476.png" alt="" />
+              <img src="../../assets/img/img/1552728393476.png" alt="" />
             </div>
             <div class="pj-text">
               <p class="pj_con">
@@ -99,7 +99,7 @@
           </li>
           <li>
             <div class="pj_tx">
-              <img src="../../static/img/img/1552728393476.png" alt="" />
+              <img src="../../assets/img/img/1552728393476.png" alt="" />
             </div>
             <div class="pj-text">
               <p class="pj_con">
@@ -110,7 +110,7 @@
           </li>
           <li>
             <div class="pj_tx">
-              <img src="../../static/img/img/1552728393476.png" alt="" />
+              <img src="../../assets/img/img/1552728393476.png" alt="" />
             </div>
             <div class="pj-text">
               <p class="pj_con">

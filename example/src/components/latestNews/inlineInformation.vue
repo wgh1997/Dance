@@ -8,7 +8,7 @@
     <div class="container">
       <div class="float">
         <div class="img_box">
-          <img src="../../static/img/img/20170301170749_7656 (1).png" alt="" />
+          <img src="../../assets/img/img/20170301170749_7656 (1).png" alt="" />
         </div>
         <div>
           <ul class="text_list">
@@ -29,7 +29,7 @@
       </div>
       <div class="float">
         <div class="img_box">
-          <img src="../../static/img/img/20170301170749_7656 (1).png" alt="" />
+          <img src="../../assets/img/img/20170301170749_7656 (1).png" alt="" />
         </div>
         <div>
           <ul class="text_list">
@@ -52,7 +52,7 @@
       </div>
       <div class="float">
         <div class="img_box">
-          <img src="../../static/img/img/20170301170749_7656 (1).png" alt="" />
+          <img src="../../assets/img/img/20170301170749_7656 (1).png" alt="" />
         </div>
         <div>
           <ul class="text_list">
@@ -75,7 +75,7 @@
       </div>
       <div class="float">
         <div class="img_box">
-          <img src="../../static/img/img/20170301170749_7656 (1).png" alt="" />
+          <img src="../../assets/img/img/20170301170749_7656 (1).png" alt="" />
         </div>
         <div>
           <ul class="text_list">
@@ -104,16 +104,16 @@
     <div>
       <ul class="img_list">
         <li>
-          <img src="../../static/img/img/1552728393476.png" alt="" />
+          <img src="../../assets/img/img/1552728393476.png" alt="" />
         </li>
         <li>
-          <img src="../../static/img/img/1552728393476.png" alt="" />
+          <img src="../../assets/img/img/1552728393476.png" alt="" />
         </li>
         <li>
-          <img src="../../static/img/img/1552728393476.png" alt="" />
+          <img src="../../assets/img/img/1552728393476.png" alt="" />
         </li>
         <li>
-          <img src="../../static/img/img/1552728393476.png" alt="" />
+          <img src="../../assets/img/img/1552728393476.png" alt="" />
         </li>
       </ul>
     </div>

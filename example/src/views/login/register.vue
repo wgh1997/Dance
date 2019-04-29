@@ -233,7 +233,7 @@
     position: relative;
     width: 1300px;
     margin: 0 auto;
-    background: url(../../static/img/img/1111.png) no-repeat;
+    background: url(../../assets/img/img/1111.png) no-repeat;
     background-position: 20px;
   }
   .contentwarp .contentinner .registerbox {

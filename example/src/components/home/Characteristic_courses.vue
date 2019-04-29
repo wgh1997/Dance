@@ -2,12 +2,12 @@
   <div class="Characteristic_courses">
     <div class="Char_bg">
       <div class="Characteristic_courses_content w1180">
-        <h3@click="$router.push('/Characteristic')">特色课程</h3>
+        <h3 @click="$router.push('/Characteristic')">特色课程</h3>
         <span>te se ke cheng</span>
         <ul class="content_introduce">
           <li>
             <div class="img_describe">
-              <img src="../static/img/img/街舞.jpg" alt="" />
+              <img src="../../assets/img/img/街舞.jpg" alt="" />
             </div>
             <h4>街舞</h4>
             <p>
@@ -18,7 +18,7 @@
           </li>
           <li>
             <div class="img_describe">
-              <img src="../static/img/img/20130828121438271.gif" alt="" />
+              <img src="../../assets/img/img/20130828121438271.gif" alt="" />
             </div>
             <h4>震感舞</h4>
             <p>
@@ -29,7 +29,7 @@
           <li>
             <div class="img_describe">
               <img
-                src="../static/img/img/depositphotos_83454406-stock-photo-girl-jumping-in-hip-hop.jpg"
+                src="../../assets/img/img/depositphotos_83454406-stock-photo-girl-jumping-in-hip-hop.jpg"
                 alt=""
               />
             </div>
@@ -41,7 +41,7 @@
           </li>
           <li>
             <div class="img_describe">
-              <img src="../static/img/img/爵士舞.jpg" alt="" />
+              <img src="../../assets/img/img/爵士舞.jpg" alt="" />
             </div>
             <h4>震感舞</h4>
             <p>
@@ -52,7 +52,7 @@
         </ul>
       </div>
       <div class="B_background">
-        <img src="../static/img/img/L-suceCaseBar.png" alt="" />
+        <img src="../../assets/img/img/L-suceCaseBar.png" alt="" />
       </div>
       <div class="Characteristic_courses_bottom"></div>
     </div>
@@ -63,7 +63,7 @@
 </script>
 <style>
   .Characteristic_courses {
-    background-image: url(../static/img/img/yuanbn3_02.png);
+    background-image: url(../../assets/img/img/yuanbn3_02.png);
     background-repeat: no-repeat;
     background-position: 1012px -6px;
     width: 100%;

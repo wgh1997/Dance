@@ -6,7 +6,7 @@
       <div class="introduce_left">
         <div class="introduce_left_head">
           <dir class="upper">
-            <img src="../static/img/img/舞蹈赛事.jpg" alt="" />
+            <img src="../../assets/img/img/舞蹈赛事.jpg" alt="" />
             <p>少年天团参加山东省邹平市大赛荣获二等奖</p>
             <a href="">查看详情 >></a>
           </dir>
@@ -48,7 +48,7 @@
       </div>
       <div class="introduce_right">
         <dir class="upper">
-          <img src="../static/img/img/图片赛事1.jpg" alt="" />
+          <img src="../../assets/img/img/图片赛事1.jpg" alt="" />
           <p>少年天团参加山东省邹平市大赛荣获二等奖</p>
           <a href="">查看详情 >></a>
         </dir>
@@ -92,7 +92,7 @@
     width: 100%;
     height: 793px;
     background: rgba(255, 255, 255, 0.8);
-    background: url("../static/img/img/yuanbn2_02.png") no-repeat -230px 0;
+    background: url("../../assets/img/img/yuanbn2_02.png") no-repeat -230px 0;
   }
 
   .Latestnews h3 {

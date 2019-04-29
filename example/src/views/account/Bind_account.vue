@@ -1,19 +1,19 @@
 <template>
     <div class="number">
         <div class="numberinner">
-          <img src="../../static/img/icon/1.jpg" alt="">
+          <img src="../../assets/img/icon/1.jpg" alt="">
            <span>学习提醒</span>
            <span>此功能需绑定微信号并关注公众号</span>
            <span style="cursor:pointer">开启</span>
         </div>
         <div class="numberinner">
-                <img src="../../static/img/icon/2.jpg" alt="">
+                <img src="../../assets/img/icon/2.jpg" alt="">
                  <span>绑定微信号</span>
                  <span >已绑定</span>
                  <span class="other" style="cursor:pointer">解绑</span>
               </div>
               <div class="numberinner">
-                    <img src="../../static/img/icon/3.jpg" alt="">
+                    <img src="../../assets/img/icon/3.jpg" alt="">
                      <span>关注公众号</span>
                      <span>使用微信扫码关注微信公众号</span>
                      <span class="other1" style="cursor:pointer">开启</span>

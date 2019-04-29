@@ -8,7 +8,7 @@
         </div>
         <div class="content">
           <div class="con_l">
-            <img src="../static/img/img/maxresdefault.jpg" alt="" />
+            <img src="../../assets/img/img/maxresdefault.jpg" alt="" />
           </div>
           <div class="con_r">
             <p>于迷茫中寻找方向，于孤独中收获希望</p>
@@ -25,7 +25,7 @@
   .about_us {
     height: 828px;
     margin: 0 auto;
-    background: url(../static/img/img/yuanbn3_04.png) no-repeat;
+    background: url(../../assets/img/img/yuanbn3_04.png) no-repeat;
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -33,7 +33,7 @@
     overflow: hidden;
     width: 100%;
     height: 827px;
-    background-image: url(../static/img/img/yuanbn2.jpg);
+    background-image: url(../../assets/img/img/yuanbn2.jpg);
   }
   .about_us_content .title {
     text-align: center;

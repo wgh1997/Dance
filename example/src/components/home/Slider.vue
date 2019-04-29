@@ -17,10 +17,10 @@
       return {
         // 图片需要引入, 否则无法显示
         imgList: [
-          { url: require("../assets/images/1.jpg") },
-          { url: require("../assets/images/2.jpg") },
-          { url: require("../assets/images/3.jpg") },
-          { url: require("../assets/images/4.jpg") }
+          // { url: require("@/assets/images/1.jpg") },
+          // { url: require("@/assets/images/2.jpg") },
+          // { url: require("@/assets/images/3.jpg") },
+          // { url: require("@/assets/images/4.jpg") }
         ]
       };
     },

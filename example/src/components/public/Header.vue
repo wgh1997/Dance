@@ -8,7 +8,7 @@
     <ul class="nav">
       <li id="index" @click="$router.push('/')">首页</li>
       <li @click="$router.push('/Personal')">个人中心</li>
-      <li>联系我们</li>
+      <li @click="handleAge">联系我们</li>
       <li @click="$router.push('/register')">注册</li>
       <li @click="$router.push('/login')">登陆</li>
     </ul>
@@ -20,7 +20,15 @@
 </template>
 
 <script>
-  export default {};
+  export default {
+    methods: {
+      handleAge(){
+        // console.log(this.$store);
+        this.$store.dispatch("ageAction")
+        console.log(this.$store.state.homeStore.age,this.$store.state.homeStore.num)
+      }
+    },
+  };
 </script>
 
 <style>

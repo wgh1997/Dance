@@ -18,19 +18,19 @@
         <ul class="introduce_plate">
           <li>
             <div>
-              <img src="../static/img/icon/关于我们.png" alt="" />
+              <img src="../../assets/img/icon/关于我们.png" alt="" />
             </div>
             <p>关于我们</p>
           </li>
           <li class="middle">
             <div>
-              <img src="../static/img/icon/喇叭.png" alt="" />
+              <img src="../../assets/img/icon/喇叭.png" alt="" />
             </div>
             <p>特色课程</p>
           </li>
           <li>
             <div>
-              <img src="../static/img/icon/视频.png" alt="" />
+              <img src="../../assets/img/icon/视频.png" alt="" />
             </div>
             <p>最新消息</p>
           </li>
@@ -75,7 +75,7 @@
   }
   .introduce::after {
     content: "";
-    background: url(../static/img/img/banner2-2.png) no-repeat;
+    background: url(../../assets/img/img/banner2-2.png) no-repeat;
     background-size: cover;
     opacity: 0.5;
     top: 0;

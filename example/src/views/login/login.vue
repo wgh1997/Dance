@@ -120,7 +120,7 @@
     background: #4B63B6;
     position: relative;
     margin: 0 auto;
-     background: url(../../static/img/img/1111.png) no-repeat;
+     background: url(../../assets/img/img/1111.png) no-repeat;
      background-position: 20px;
 
   }

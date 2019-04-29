@@ -2,64 +2,64 @@
   <div class="all_box">
     <ul class="img_list">
       <li>
-        <img src="../../static/img/img/maxresdefault.jpg" alt="" />
+        <img src="../../assets/img/img/maxresdefault.jpg" alt="" />
         <p>
           【喜讯】中国舞蹈家协会授予名字艺术教育为2018年度”考级示范基地”
         </p>
         <p>2019-04-12</p>
       </li>
       <li>
-        <img src="../../static/img/img/maxresdefault.jpg" alt="" />
+        <img src="../../assets/img/img/maxresdefault.jpg" alt="" />
         <p>舞蹈学员登上国家大剧院</p>
         <p>2019-03-1</p>
       </li>
       <li>
-        <img src="../../static/img/img/maxresdefault.jpg" alt="" />
+        <img src="../../assets/img/img/maxresdefault.jpg" alt="" />
         <p>舞蹈学员登上国家大剧院</p>
         <p>2019-03-1</p>
       </li>
       <li>
-        <img src="../../static/img/img/maxresdefault.jpg" alt="" />
+        <img src="../../assets/img/img/maxresdefault.jpg" alt="" />
         <p>舞蹈学员登上国家大剧院</p>
         <p>2019-03-1</p>
       </li>
       <li>
-        <img src="../../static/img/img/maxresdefault.jpg" alt="" />
+        <img src="../../assets/img/img/maxresdefault.jpg" alt="" />
         <p>舞蹈学员登上国家大剧院</p>
         <p>2019-03-1</p>
       </li>
       <li>
-        <img src="../../static/img/img/maxresdefault.jpg" alt="" />
+        <img src="../../assets/img/img/maxresdefault.jpg" alt="" />
         <p>舞蹈学员登上国家大剧院</p>
         <p>2019-03-1</p>
       </li>
       <li>
-        <img src="../../static/img/img/maxresdefault.jpg" alt="" />
+        <img src="../../assets/img/img/maxresdefault.jpg" alt="" />
         <p>舞蹈学员登上国家大剧院</p>
         <p>2019-03-1</p>
       </li>
       <li>
-        <img src="../../static/img/img/maxresdefault.jpg" alt="" />
+        <img src="../../assets/img/img/maxresdefault.jpg" alt="" />
         <p>舞蹈学员登上国家大剧院</p>
         <p>2019-03-1</p>
       </li>
       <li>
-        <img src="../../static/img/img/maxresdefault.jpg" alt="" />
+        <img src="../../assets/img/img/maxresdefault.jpg" alt="" />
         <p>舞蹈学员登上国家大剧院</p>
         <p>2019-03-1</p>
       </li>
       <li>
-        <img src="../../static/img/img/maxresdefault.jpg" alt="" />
+        <img src="../../assets/img/img/maxresdefault.jpg" alt="" />
         <p>舞蹈学员登上国家大剧院</p>
         <p>2019-03-1</p>
       </li>
       <li>
-        <img src="../../static/img/img/maxresdefault.jpg" alt="" />
+        <img src="../../assets/img/img/maxresdefault.jpg" alt="" />
         <p>舞蹈学员登上国家大剧院</p>
         <p>2019-03-1</p>
       </li>
       <li>
-        <img src="../../static/img/img/maxresdefault.jpg" alt="" />
+        <img src="../../assets/img/img/maxresdefault.jpg" alt="" />
         <p>舞蹈学员登上国家大剧院</p>
         <p>2019-03-1</p>
       </li>
