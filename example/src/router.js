@@ -14,7 +14,8 @@ import latestNews from "./views/latestNews.vue"; //最新消息
 import all from "./components/latestNews/all"; //最新消息-全部
 import inlineInformation from "./components/latestNews/inlineInformation"; //学员反馈
 import studentFeedback from "./components/latestNews/studentFeedback.vue"; //行内资讯
-
+import courses from "./views/courses";//课程
+import Course_Details from "./views/courses/Course_Details.vue";//课程详情
 Vue.use(Router);
 export default new Router({
   mode: "history",
@@ -78,6 +79,18 @@ export default new Router({
         { path: "inlineInformation", component: inlineInformation },
         { path: "studentFeedback", component: studentFeedback }
       ]
+    },
+    //特色课程的路由
+    {
+      path: "/courses",
+      name: "courses",
+      component: courses
+    },
+    //课程详情
+    {
+      path: "/Course_Details",
+      name: "Course_Details",
+      component: Course_Details
     }
   ]
 });
