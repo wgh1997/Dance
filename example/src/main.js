@@ -4,7 +4,7 @@ import router from "./router";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import axios from "axios";
-
+axios.defaults.withCredentials=true//可以让他携带cookie
 Vue.prototype.$axios = axios;
 
 Vue.use(ElementUI);
@@ -17,6 +17,7 @@ axios.interceptors.response.use(({ data }) => {
 
 // axios请求拦截
 axios.interceptors.request.use(config => {
+  console.log(config)
   config.url = "/exa" + config.url;
   return config;
 });

@@ -18,7 +18,17 @@
 </template>
 <script>
 export default {
-    name:'shipin'
+    name:'shipin',
+    mounted() {
+        this.$axios.git("/sys/my_courses",{
+            params:{
+
+            }
+        }).then((data)=>{
+            console.log(data)
+        })
+    },
+    
 }
 </script>
 <style scoped>
