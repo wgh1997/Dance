@@ -69,4 +69,7 @@ export default {
       height:76px;
       border-bottom:1px solid #C2C2C2;
 }
+.about_head li span{
+    text-align:center;
+}
 </style>

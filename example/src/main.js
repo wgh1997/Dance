@@ -26,13 +26,11 @@ axios.interceptors.response.use(({ data }) => {
   return data;
 });
 
-//axios请求拦截
-// axios.interceptors.request.use(config => {
-//   console.log(config.url)
-//   config.url = "" + config.url;
-//     // console.log("/exa")
-//   return config;
-// });
+// axios请求拦截
+axios.interceptors.request.use(config => {
+  config.url = "/exa" + config.url;
+  return config;
+});
 new Vue({
   router,
   store,

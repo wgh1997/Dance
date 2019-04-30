@@ -2,7 +2,7 @@
   <div class="Characteristic_courses">
     <div class="Char_bg">
       <div class="Characteristic_courses_content w1180">
-        <h3@click="$router.push('/Characteristic')">特色课程</h3>
+        <h3 @click="$router.push('/courses')" style="cursor: pointer">特色课程</h3>
         <span>te se ke cheng</span>
         <ul class="content_introduce">
           <li>

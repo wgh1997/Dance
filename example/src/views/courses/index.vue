@@ -34,7 +34,7 @@
                 </div>
                 <div class="Jazz_img">
                     <ul>
-                        <li><img src="" alt=""></li>
+                        <li @click="$router.push('/Course_Details')" style="cursor: pointer"><img src="" alt=""></li>
                         <li><img src="" alt=""></li>
                         <li><img src="" alt=""></li>
                         <li><img src="" alt=""></li>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="Jazz_img">
                         <ul>
-                            <li><img src="" alt=""></li>
+                            <li @click="$router.push('/Course_Details')" style="cursor: pointer"><img src="" alt=""></li>
                             <li><img src="" alt=""></li>
                             <li><img src="" alt=""></li>
                             <li><img src="" alt=""></li>
@@ -68,8 +68,8 @@
     </div>
 </template>
 <script>
-    import Header from "../public/Header.vue"; //头部
-    import Footer from "../public/Footer"; //尾部
+    import Header from "../../components/public/Header.vue"; //头部
+    import Footer from "../../components/public/Footer.vue"; //尾部
 export default {
     components:{
         Header,

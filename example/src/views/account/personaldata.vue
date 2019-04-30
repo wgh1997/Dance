@@ -12,13 +12,14 @@
             <p class="jpg">
             <el-upload
             class="avatar-uploader"
-            action="/user/updateHead"
+            action="/user/updateHead?file"
             :show-file-list="false"
             :on-success="handleAvatarSuccess"
             :before-upload="beforeAvatarUpload">
             <img v-if="imageUrl" :src="imageUrl" class="avatar">
             <i v-else class="el-icon-plus avatar-uploader-icon"></i>
-            </el-upload></p>
+            </el-upload>
+            </p>
             <input type="radio"checked="checked" class="boy"  name="1" v-model="sex" value="1">     
             <p class="p1">男士</p>
             <input type="radio"  class="girl"  name="1" v-model="sex" value="2">
@@ -52,6 +53,7 @@ export default {
         };
     },
     methods: {
+        //这个是发送成功返回的数据
       handleAvatarSuccess(res, file) {
           console.log(file)
           console.log(res)
@@ -59,10 +61,9 @@ export default {
          console.log(this.imageUrl)
       },
       beforeAvatarUpload(file){
-          console.log(file)
+        console.log(file)
         const isJPG = file.type === 'image/jpeg';
         const isLt2M = file.size / 1024 / 1024 < 2;
-
         if (!isJPG) {
           this.$message.error('上传头像图片只能是 JPG 格式!');
         }
@@ -71,6 +72,11 @@ export default {
         }
         return isJPG && isLt2M;
       },
+      bbs(file, fileList){
+          console.log(file.File)
+           console.log(fileList)
+      },
+      //这个是点击提交判断并进行提交
       Preservation(){
            var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
            var myree = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
