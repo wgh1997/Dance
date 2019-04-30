@@ -19,7 +19,7 @@
   import Header from "../components/public/Header.vue"; //头部
   import Slider from "../components/Slider";//轮播图
   import Footer from "../components/public/Footer"; //尾部
-
+    
   export default {
     components: {
       Characteristiccourses,

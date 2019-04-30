@@ -8,7 +8,7 @@
         </div>
         <div class="content">
           <div class="con_l">
-            <img src="../static/img/img/maxresdefault.jpg" alt="" />
+            <img :src="$store.state.home.aboutnew" alt="" />
           </div>
           <div class="con_r">
             <p>于迷茫中寻找方向，于孤独中收获希望</p>
@@ -21,6 +21,19 @@
     </div>
   </div>
 </template>
+  <script>
+  export default {
+          data(){
+               return{
+                 
+               }
+          },
+          created(){
+                    this.$store.dispatch("GetABOUT")
+          }
+          
+  }
+  </script>
 <style>
   .about_us {
     height: 828px;

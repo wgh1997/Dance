@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <div class="login-headerwarp">
       <div class="login-header">
@@ -27,17 +28,17 @@
             <div class="c-right">账户登录</div>
           </div>
           <div class="textwarp">
-            <input type="text" placeholder="请输入账号" />
+            <input type="text" v-model="userName" placeholder="请输入账号" />
           </div>
           <div class="passwordwarp">
-            <input type="password" placeholder="请输入密码" />
+            <input type="password" v-model="passWord" placeholder="请输入密码" />
           </div>
           <div class="remberwarp">
             <div class="go-left"><input type="checkbox" />记录我的登录状态</div>
             <div class="go-right"><a href="#">忘记密码?</a></div>
           </div>
           <div class="buttonwrap">
-            <button>立即登录</button>
+            <button @click="fn">立即登录</button>
           </div>
         </div>
       </div>
@@ -59,6 +60,26 @@
     </footer>
   </div>
 </template>
+<script>
+export default {
+          data(){
+
+                return{
+                      userName:"",
+                      passWord:""
+                }
+          },
+         methods:{
+              fn(){
+
+                    this.$store.dispatch("Login",{
+                         userName:this.userName,
+                        passWord:this.passWord
+                    })
+              } 
+         }
+}
+</script>
 
 <style scoped>
   .login-headerwarp {
