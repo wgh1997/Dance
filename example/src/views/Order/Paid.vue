@@ -6,7 +6,7 @@
             <img src="" alt="" />
           </div>
           <h3>宏利私教课程</h3>
-          <p class="price">查看详细</p>
+          <p class="price" @click="$router.push('/cart')">查看详细</p>
         </div>
       </div>
       <div class="details">

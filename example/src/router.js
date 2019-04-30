@@ -15,6 +15,7 @@ import latestNews from "./views/latestNews.vue"; //最新消息
 import all from "./components/latestNews/all"; //最新消息-全部
 import inlineInformation from "./components/latestNews/inlineInformation"; //学员反馈
 import studentFeedback from "./components/latestNews/studentFeedback.vue"; //行内资讯
+import cart from '../routers'
 
 Vue.use(Router);
 export default new Router({
@@ -80,5 +81,5 @@ export default new Router({
         { path: "studentFeedback", component: studentFeedback }
       ]
     }
-  ]
+  ].concat(cart)
 });

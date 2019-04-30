@@ -25,28 +25,28 @@
             <div class="userInfo">
               <div class="userInfoinner">
                 <span>账号:</span>
-                <input type="text" placeholder="手机号/邮箱" />
+                <input type="text" v-model="email" class="phone" placeholder="手机号/邮箱" />
               </div>
             </div>
             <div class="passwordwarp">
               <span>密码:</span>
-              <input type="password" placeholder="请输入您的密码" />
+              <input type="password" v-model="password" placeholder="请输入您的密码" />
             </div>
           </div>
           <div class="remberwarp">
             <div class="go-left">
-              <input type="text" placeholder="请输入验证码" />
+              <input type="text" v-model="num" placeholder="请输入验证码" />
             </div>
-            <div class="go-right">验证码</div>
+            <div class="go-right" @click="getCode"><img :src="dataimg" alt="">{{text}}</div>
           </div>
           <div class="warning">
             <p>
-              <input type="checkbox" />
+              <input type="checkbox" class="checkbox" @click="checkbox=!checkbox" />
               我已阅读并同意《XX注册协议》
             </p>
           </div>
           <div class="buttonwrap">
-            <button>立即登录</button>
+            <button @click="fn">立即注册</button>
           </div>
           <div>
             <div class="lastmsg">
@@ -74,65 +74,103 @@
   </div>
 </template>
 <script>
+ 
   export default {
     data() {
       return {
-        phone: "",
-        pwd: "",
-        isShow: false,
-        tips: "",
-        imgUrl: "",
-        yzm: "",
-        checkbox: false
+            text:"获取验证码",
+            dataimg:"",
+            email:"",
+            password:"",
+            num:"",
+      
+         checkbox: false
       };
     },
     methods: {
-      fn() {
+       getCode(){
+    //                this.$store.dispatch("GetCode",{
+    //                     sucess:(data)=>{
+    //                       //  var blob = new Blob(data);
+
+    //                        var url = createObjectURL(data);
+    //                         this.dataimg = url
+    //                     }
+    //                })
+                 this.text = ""
+
+               this.dataimg = "http://188.131.188.119/sys/captcha.jpg?"+Date.now()
+                   
+             
+      },
+      fn() {  
+           var el = document.querySelector(".checkbox")
+           var phone =  document.querySelector(".phone")
+               var emailRegular = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/; //邮箱正则
+                    
+               
+                    if ( emailRegular.test(this.email) && el.checked){
+                        this.$store.dispatch("Register",{
+                        email:this.email,
+                        password:this.password,
+                        num:this.num,
+                      
+            })
+                  }else{
+                     alert("按规定格式填写邮箱地址")
+                  }
+               
+             
+                 
+      },
+     
+    } 
+  }  
         // if(this.phone)
 
-        var phoneRegular = /^[1][3,4,5,7,8][0-9]{9}$/; //手机号正则
-        var emailRegular = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/; //邮箱正则
-        var pwdRegular = /^.*(?=.{6,})(?=.*\d)(?=.*[a-z]).*$/;
-        if (phoneRegular.test(this.phone) || phoneRegular.test(this.phone)) {
-          if (pwdRegular.test(this.pwd)) {
-            if (this.checkbox) {
-              this.$axios
-                .get("/haha", {
-                  params: {
-                    a: 1,
-                    b: 2
-                  }
-                })
-                .then(res => {
-                  this.imgUrl = res.url;
-                  if (res.ok === 1) {
-                    localStorage.userInfo = {
-                      headPortrait: res.touxiang,
-                      StudentID: res.xuehao,
-                      nickname: res.yonghunicheng,
-                      userName: res.yonghuming
-                    };
-                    this.$router.push("/");
-                  }
-                });
-            } else {
-              this.tips = "请同意注册协议";
-              this.isShow = !this.isShow;
-            }
-          } else {
-            this.tips = "密码最少六位，包含数字和字母！";
-            this.isShow = !this.isShow;
-          }
-        } else {
-          this.isShow = !this.isShow;
-          this.tips = "请输入正确的手机号或者邮箱！";
-        }
-      }
-    }
+    //     var phoneRegular = /^[1][3,4,5,7,8][0-9]{9}$/; //手机号正则
+    //     var emailRegular = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/; //邮箱正则
+    //     var pwdRegular = /^.*(?=.{6,})(?=.*\d)(?=.*[a-z]).*$/;
+    //     if (phoneRegular.test(this.phone) || phoneRegular.test(this.phone)) {
+    //       if (pwdRegular.test(this.pwd)) {
+    //         if (this.checkbox) {
+    //           this.$axios
+    //             .get("/haha", {
+    //               params: {
+    //                 a: 1,
+    //                 b: 2
+    //               }
+    //             })
+    //             .then(res => {
+    //               this.imgUrl = res.url;
+    //               if (res.ok === 1) {
+    //                 localStorage.userInfo = {
+    //                   headPortrait: res.touxiang,
+    //                   StudentID: res.xuehao,
+    //                   nickname: res.yonghunicheng,
+    //                   userName: res.yonghuming
+    //                 };
+    //                 this.$router.push("/");
+    //               }
+    //             });
+    //         } else {
+    //           this.tips = "请同意注册协议";
+    //           this.isShow = !this.isShow;
+    //         }
+    //       } else {
+    //         this.tips = "密码最少六位，包含数字和字母！";
+    //         this.isShow = !this.isShow;
+    //       }
+    //     } else {
+    //       this.isShow = !this.isShow;
+    //       this.tips = "请输入正确的手机号或者邮箱！";
+    //     }
+    //   }
+    // }
     // mounted() {
     //   this.yzm = this.imgUrl ? "" : "验证码";
     // }
-  };
+  
 </script>
 <style scoped>
   @charset "utf-8";
@@ -324,11 +362,11 @@
     background: #4b63b7;
     outline: 0;
     border: none;
-    color: #fff;
+    color: #ddd;
   }
 
   input::-webkit-input-placeholder {
-    color: #fff;
+    color: #ddd;
   }
   .remberwarp .go-right {
     width: 144px;

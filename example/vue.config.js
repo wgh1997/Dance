@@ -3,15 +3,15 @@ module.exports = {
       port: 80,
       host: "127.0.0.1",
       open: true,
-      proxy: {
-        "/exa": {
-          target: "http://188.131.188.119:7777",
-          changeOrigin: true,
-          pathRewrite: {
-            "^/exa": "/"
-          }
-        }
-      }
+      // proxy: {
+      //   "/ele": {
+      //     target: "http://188.131.188.119",
+      //     changeOrigin: true,
+      //     pathRewrite: {
+      //       "^/ele": ""
+      //     }
+      //   }
+      // }
     }
   };
   

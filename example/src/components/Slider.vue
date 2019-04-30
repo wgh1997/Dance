@@ -28,6 +28,9 @@
       beforeMount: function() {
         this.height = ($(window).width() * 664) / 1920 + "px";
       }
+    },
+    created(){
+          
     }
   };
 </script>
