@@ -1,23 +1,35 @@
 <template>
      <div id="mokuai">
-                
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <a href="#">文件名称</a>
-                <a href="#">文件名称</a>
-                <a href="#">文件名称</a>
-                <a href="#">文件名称</a>
-                <a href="#">文件名称</a>
-                <a href="#">文件名称</a>
-                <a href="#">文件名称</a>
-        </div>
+            <div class="scan1">
+            <div class="content">
+				   <img src="../../assets/Folder/微信图片_20190427142439.png">
+                    
+			</div>
+            <p>文档名称</p>
+             </div>    
+
+             <div class="scan1">
+            <div class="content">
+				    <img src="../../assets/Folder/微信图片_20190427142439.png">
+			</div>
+            <p>文档名称</p>
+             </div>
+
+
+
+             <div class="scan1">
+            <div class="content">
+				     <img src="../../assets/Folder/微信图片_20190427142439.png">
+			</div>
+            <p>文档名称</p>
+             </div>
+
+
+             <div class="scan1">
+            <div class="content"></div>
+            <p>文档名称</p>
+             </div>        
+    </div>
 </template>
 
 
@@ -34,63 +46,32 @@ export default {
             margin:0;
             padding: 0;
         }
-        li{
-            list-style :none;
-        }
-        a{
-            color: gray;
-        }
+        
         #mokuai{
             width:960px;
-            height:670px;
-           
+            height:670px;          
             background: whitesmoke;
         }
-       
-        #mokuai ul{
-            margin-left:32px;
-            margin-top:40px;
-        }
-        #mokuai ul li{
-            width:90px;
-            height:90px;
+        
+        #mokuai .scan1{
+            width:120px;
+            height:160px;
+            margin-left:58px;
+            margin-top:40px; 
             float: left;
-            background: gray;
-            margin-left:32px;
         }
-        #mokuai a:nth-last-child(1){
-            position: absolute;
-            top:218px;
-            left:74px;
+        #mokuai .scan1 .content{
+            width:120px;
+            height:120px;
+          
         }
-        #mokuai a:nth-last-child(2){
-            position: absolute;
-            top:218px;           
-            left:196px;
+        #mokuai .scan1 p{
+            margin-left:30px;
+            line-height: 60px;
         }
-        #mokuai a:nth-last-child(3){
-            position: absolute;
-            top:218px;           
-            left:318px;
-        }
-        #mokuai a:nth-last-child(4){
-            position: absolute;
-            top:218px;           
-            left:440px;
-        }
-        #mokuai a:nth-last-child(5){
-            position: absolute;
-            top:218px;           
-            left:566px;
-        }
-        #mokuai a:nth-last-child(6){
-            position: absolute;
-            top:218px;           
-            left:687px;
-        }
-        #mokuai a:nth-last-child(7){
-            position: absolute;
-            top:218px;           
-            left:812px;
-        }
+		.content img{
+			width:100%;
+height:100%;			}
+		
+      
 </style>

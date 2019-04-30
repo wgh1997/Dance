@@ -5,17 +5,17 @@ import login from "./views/login/login.vue"; //登录
 import home from "./views/home.vue"; //首页
 import Personal from "./views/Personal.vue"; //个人中心
 import curriculum from "./views/curriculum";
-import account from "./views/account";
-import Order from "./views/Order";
-import newsList from "./views/newsList";
-import cloud from "./views/cloud";
-import shoucang from "./views/shoucang";
-
+import account from "./views/account"; //账户
+import Order from "./views/Order"; //订单
+import newsList from "./views/newsList"; //消息列表
+import cloud from "./views/cloud";//个人云盘
+import shoucang from "./views/shoucang"; //我的收藏
 import latestNews from "./views/latestNews.vue"; //最新消息
 import all from "./components/latestNews/all"; //最新消息-全部
 import inlineInformation from "./components/latestNews/inlineInformation"; //学员反馈
 import studentFeedback from "./components/latestNews/studentFeedback.vue"; //行内资讯
-
+import courses from "./views/courses";//课程
+import Course_Details from "./views/courses/Course_Details.vue";//课程详情
 Vue.use(Router);
 export default new Router({
   mode: "history",
@@ -79,6 +79,18 @@ export default new Router({
         { path: "inlineInformation", component: inlineInformation },
         { path: "studentFeedback", component: studentFeedback }
       ]
+    },
+    //特色课程的路由
+    {
+      path: "/courses",
+      name: "courses",
+      component: courses
+    },
+    //课程详情
+    {
+      path: "/Course_Details",
+      name: "Course_Details",
+      component: Course_Details
     }
   ]
 });

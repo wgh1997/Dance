@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 const { upPic } = require("./module/upPic");
-
+//
 app.post("/user/updateStudent", function(req, res) {
   console.log(1);
   console.log(req.body.autograph);
@@ -13,6 +13,7 @@ app.post("/user/updateStudent", function(req, res) {
     msg: "成功"
   });
 });
+//
 app.post("user/updateStudent", function(req, res) {
   console.log(1);
   console.log(req.body.oldPwd);
@@ -21,6 +22,7 @@ app.post("user/updateStudent", function(req, res) {
     msg: "成功"
   });
 });
+///
 app.post("/user/updatePwd", function(req, res) {
   console.log(1111111);
   res.json({

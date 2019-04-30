@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
      <div class="courses">
         <div class="Hiphop">
             <h1>街舞</h1>
@@ -159,120 +160,171 @@
                 </li>
             </ul>
         </div>
+=======
+    <div>
+        <Header></Header>
+        <div class="curriculum">
+            <div class="courses">
+                <img src="" alt="">
+            </div>
+            <div class="introduction">
+                <ul>
+                    <li>
+                        <span>
+                            <img src="" alt="">
+                        </span>
+                        <p>舞种：爵士</p>
+                        <p>授课时间：周六晚八点</p>
+                    </li>
+                    <li>
+                        <span>
+                            <img src="" alt="">
+                        </span>
+                        <p>舞种：爵士 拷贝</p>
+                        <p>授课时间：周日晚八点</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="Jazz">
+                <div class="Jazz_title">
+                    <h3>爵士舞</h3>
+                    <div class="line">
+                        <span></span><span></span>
+                    </div>
+                    <br>
+                    <p>系统班</p>
+                </div>
+                <div class="Jazz_img">
+                    <ul>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Jazz">
+                    <div class="Jazz_title">
+                        <h3>爵士舞</h3>
+                        <div class="line">
+                            <span></span><span></span>
+                        </div>
+                        <br>
+                        <p>系统班</p>
+                    </div>
+                    <div class="Jazz_img">
+                        <ul>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>   
+        <Footer></Footer>
+>>>>>>> origin/devwongguohui20190428
     </div>
 </template>
 <script>
+    import Header from "../public/Header.vue"; //头部
+    import Footer from "../public/Footer"; //尾部
 export default {
-    
+    components:{
+        Header,
+        Footer
+    }
 }
 </script>
- <style scoped>
+<style scoped>
         * {
             margin: 0;
             padding: 0;
         }
-
-        .courses {
-            width: 1200px;
-            margin: 0 auto;
+        li{
+            list-style: none;
         }
-
-        .Hiphop{
-            width: 100%;
-            height: 500px;
-            text-align: center;
+        a{
+            text-decoration: none;
         }
-        .Hiphop h1{
-                padding: 27px 0 16px 0
+        .curriculum{
+            width:1200px;
+            margin:0 auto;
         }
-        .Hiphop ul {
-            margin: 0px 0 0 134px
+        .courses{
+            width:100%px;
+            height:580px;
+            background: rebeccapurple;
         }
-
-        .Hiphop li {
-            width: 300px;
-            height: 240px;
-            float: left;
-            margin: 0 10px;
+        .courses img{
+            width:100%;
+            height:100%;
         }
-
-        .content span {
+        .introduction{
+            width:800px;
+            height:180px;
+            background:rgba(165,177,214,1);
+            border-radius:10px;
+            margin:-85px 0 0 103px;
+        }
+        .introduction span{
             display: block;
-            width: 300px;
-            height: 200px;
+            width:100px;
+            height:100px;
+            border-radius:50%;
+            background:saddlebrown;
         }
-
-        .content span img {
-            width: 100%;
-            height: 100%;
+        .introduction span img{
+            width:100%;
+            height:100%;
         }
-
-        .content p {
-            height: 40px;
-            line-height: 40px;
-            position: relative;
-            left: 0px;
-            color: aliceblue;
-            top: -39px;
-            background: #000000;
-            opacity: 0.5;
+        .introduction ul{
+            margin: 0 0 0 86px;
         }
-        .Shaking{
-              width: 100%;
-            height: 500px;
-            text-align: center;
-        }
-         .Shaking h1{
-                   padding: 0px 94px 18px 64px;
-        }
-        .Shaking ul {
-            margin: 0px 0 0 134px
-        }
-
-        .Shaking li {
-            width: 300px;
-            height: 240px;
+        .introduction ul li{
+            margin: 20px 80px 0 0px;
             float: left;
-            margin: 0 10px;
         }
-
-        .Shaking span {
-            display: block;
-            width: 300px;
-            height: 200px;
+        .Jazz{
+            width:100%;
         }
-
-        .Shaking span img {
-            width: 100%;
-            height: 100%;
-        }
-        .Lock_dance{
-              width: 100%;
-            height: 500px;
+        .Jazz_title{   
             text-align: center;
+            margin: 50px 0 auto;
         }
-         .Lock_dance h1{
-                   padding: 0px 94px 18px 64px;
+        .Jazz_title h3{
+            font-size:20px;
+            font-family:MicrosoftYaHei;
+            font-weight:400;
+            color:rgba(30,30,30,1);
         }
-        .Lock_dance ul {
-            margin: 0px 0 0 134px
+        .line{
+            margin: 0px 0px 0px 470px
         }
-
-        .Lock_dance li {
-            width: 300px;
-            height: 240px;
-            float: left;
-            margin: 0 10px;
-        }
-
-        .Lock_dance span {
+        .line span{
             display: block;
-            width: 300px;
-            height: 200px;
+            float: left;
+            width:120px;
+            height:4px;
+            background:rgba(165,177,214,1);
+            margin: 9px 8px 0px 4px;
         }
-
-        .Lock_dance span img {
-            width: 100%;
-            height: 100%;
+        .Jazz .Jazz_img{
+            width:100%;
+            height: 502px;
         }
-    </style>
+        .Jazz .Jazz_img ul{
+            margin: 0px 0px 0px 90px
+        }
+        .Jazz .Jazz_img ul li{
+            background: salmon;
+            float: left;
+            width:270px;
+            height:180px;
+            margin:60px 100px 0 0;
+        }
+</style>

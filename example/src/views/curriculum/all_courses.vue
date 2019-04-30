@@ -37,7 +37,14 @@ export default {
         }
     },
     mounted() {
-        console.log(1)
+       this.$axios.get("/sys/my_courses",{
+            params:{
+                pageNum:"1",
+	            pageSize:"1"
+            }
+       }).then(data=>{
+           console.log(data)
+       })
     },
 
 }
