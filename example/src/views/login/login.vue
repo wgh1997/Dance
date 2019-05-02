@@ -71,10 +71,20 @@ export default {
           },
          methods:{
               fn(){
-
+                console.log(11111)
+                    // if()
                     this.$store.dispatch("Login",{
                          userName:this.userName,
-                        passWord:this.passWord
+                        passWord:this.passWord,
+                        success:((data)=>{
+                             if(data.code===0){
+                                      this.$message({
+          showClose: true,
+          message: '登录成功',
+          type: 'success'
+        });
+                             }
+                        })
                     })
               } 
          }

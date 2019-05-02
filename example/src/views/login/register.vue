@@ -25,7 +25,7 @@
             <div class="userInfo">
               <div class="userInfoinner">
                 <span>账号:</span>
-                <input type="text" v-model="email" class="phone" placeholder="手机号/邮箱" />
+                <input type="text" v-model="email" class="phone" @blur ="textinput" placeholder="手机号/邮箱" />
               </div>
             </div>
             <div class="passwordwarp">
@@ -83,12 +83,13 @@
             email:"",
             password:"",
             num:"",
-      
+          emailRegular: /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/,
          checkbox: false
       };
     },
     methods: {
        getCode(){
+           this.$store.dispatch("GetCode")
     //                this.$store.dispatch("GetCode",{
     //                     sucess:(data)=>{
     //                       //  var blob = new Blob(data);
@@ -103,29 +104,56 @@
                    
              
       },
-      fn() {  
-           var el = document.querySelector(".checkbox")
+      textinput(){
+          
            var phone =  document.querySelector(".phone")
-               var emailRegular = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/; //邮箱正则
-                    
+          
+             if ( this.emailRegular.test(this.email)){
+                         return false
+          
+                  }else{
+                      this.$message({
+          showClose: true,
+          message: '请输入正确的邮箱格式',
+          type: 'warning'
+        });
+                  }
                
-                    if ( emailRegular.test(this.email) && el.checked){
-                        this.$store.dispatch("Register",{
+      },
+      
+      fn() {  
+         
+                 var el = document.querySelector(".checkbox")
+                 //var emailRegular = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/; //邮箱正则
+               
+                  
+                       if( this.emailRegular.test(this.email)&& el.checked){
+                          this.$store.dispatch("Register",{
                         email:this.email,
                         password:this.password,
                         num:this.num,
+                        success:((data)=>{
+                              if(data.code === 0){
+                                    this.$message({
+          showClose: true,
+          message: '恭喜你，注册成功,页面2s后将自动跳转到登录页面，请稍后...',
+          type: 'success'
+        });
+                   setTimeout(()=>{
+                          this.$router.push("/login")
+                   },2000)
+                              }
+                        })
                       
             })
-                  }else{
-                     alert("按规定格式填写邮箱地址")
-                  }
-               
+                       }
+                 
              
                  
-      },
+      }
      
-    } 
-  }  
+  } 
+  } 
         // if(this.phone)
 
     //     var phoneRegular = /^[1][3,4,5,7,8][0-9]{9}$/; //手机号正则
