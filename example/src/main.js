@@ -29,7 +29,7 @@ axios.interceptors.response.use(({ data }) => {
 
 // axios请求拦截
 axios.interceptors.request.use(config => {
-  console.log(config)
+  //console.log(config)
   config.url = "http://188.131.188.119" + config.url;
   return config;
 });

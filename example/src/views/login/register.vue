@@ -140,7 +140,13 @@
           type: 'success'
         });
                    setTimeout(()=>{
-                          this.$router.push("/login")
+                          this.$router.push({
+                              path:"/login",
+                              query:{
+                                  email:this.email,
+                                  password:this.password
+                              }
+                          })
                    },2000)
                               }
                         })

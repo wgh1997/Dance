@@ -71,7 +71,7 @@ export default {
           },
          methods:{
               fn(){
-                console.log(11111)
+                //console.log(11111)
                     // if()
                     this.$store.dispatch("Login",{
                          userName:this.userName,
@@ -87,6 +87,10 @@ export default {
                         })
                     })
               } 
+         },
+        created(){
+               this.$route.password = this.passWord,
+               this.$route.email = this.userName
          }
 }
 </script>

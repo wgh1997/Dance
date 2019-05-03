@@ -15,7 +15,20 @@
 </template>
 <script>
 export default {
-    
+  mounted() {
+    this.$axios.get("/test/login").then(res=>{
+            console.log(res)
+        })
+        this.$axios.get("/sys/my_courses",{
+        params:{
+            pageNum:1,
+            pageSize:2
+        }      
+       }).then(data=>{
+           console.log(data)
+           this.bba=data.list
+       }) 
+    },  
 }
 </script>
 <style scoped>

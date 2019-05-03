@@ -1,13 +1,13 @@
 <template>
     <div class="curriculum_a">
         <ul>
-            <li v-for="imit in bba" @click="fn">
+            <li v-for="imit in curriculum" @click="fn">
                 <div class="Introduction_diagram">
-                    <img src="" alt="">
+                    <img :src="imit.courseCover" alt="">
                 </div>
-                <p>{{imit.name}}</p>
-                <span>{{imit.teacher}}</span><br>
-                <a>{{imit.introduce}}</a>
+                <p>{{imit.courseName}}</p>
+                <span>{{imit.teacherName}}</span><br>
+                <a>{{imit.courseText}}</a>
             </li>
         </ul>
     </div>
@@ -17,18 +17,7 @@ export default {
      name: "all_courses",
      data(){
         return{  
-            bba:[{
-                name:"震感舞教学",
-                src:"",
-                introduce:"刘老师在不遗余力展示舞姿",
-                teacher:"刘思嘉老师"
-
-            },{
-                name:"震感舞教学",
-                src:"",
-                introduce:"刘老师在不遗余力展示舞姿",
-                teacher:"刘思嘉老师"
-            }]
+            curriculum:[]
         }
     },
     methods: {
@@ -36,15 +25,21 @@ export default {
             console.log("我要运行啦")
         }
     },
-    mounted() {
-       this.$axios.get("/sys/my_courses",{
-            params:{
-                pageNum:"1",
-	            pageSize:"1"
-            }
+    created() {
+        this.$axios.get("/test/login").then(res=>{
+            console.log(res)
+        })
+       this.$axios.get("/course/my_courses",{
+        params:{
+            pageNum:1,
+            pageSize:3,
+
+        }      
        }).then(data=>{
-           console.log(data)
-       })
+           console.log(data.list)
+           this.curriculum=data.list;
+          
+       }) 
     },
 
 }

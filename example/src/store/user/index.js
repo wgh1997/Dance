@@ -15,7 +15,7 @@ export default{
           },
         actions:{
             Login(context,obj){
-                  console.log(obj.userName)
+                 // console.log(obj.userName)
                 axios.post("/sys/student/login",{
                     phoneOrEmail:obj.userName,
                    password:obj.passWord      
