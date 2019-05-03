@@ -1,15 +1,15 @@
 import axios from "axios"
 export default{
         state:{
-            phoneOrEmail: localStorage.userName,
+            //phoneOrEmail: localStorage.userName,
                 // password:"",
                 userId:localStorage.userId,
-                ImageData:""
+                //ImageData:""
         },
           mutations:{
             CHANGE(state,obj){
 
-                    state.phoneOrEmail = localStorage.userName = obj.userName
+                    state. userId =localStorage.userId= obj.uid
                       
             }
           },
@@ -20,11 +20,11 @@ export default{
                     phoneOrEmail:obj.userName,
                    password:obj.passWord      
                 }).then(function(data){
-                       console.log(data)
+                       console.log(data,11111111111111)
                            obj.success(data)
                         if(data.code === 0){
                                
-                             context.commit("CHANGE",obj)
+                             context.commit("CHANGE",data)
                         }
                          
                 })

@@ -35,7 +35,7 @@
           </div>
           <div class="remberwarp">
             <div class="go-left"><input type="checkbox" />记录我的登录状态</div>
-            <div class="go-right"><a href="#">忘记密码?</a></div>
+            <div class="go-right"><el-button type="text" @click="changepassword" class="forget">忘记密码</el-button ></div>
           </div>
           <div class="buttonwrap">
             <button @click="fn">立即登录</button>
@@ -78,19 +78,43 @@ export default {
                         passWord:this.passWord,
                         success:((data)=>{
                              if(data.code===0){
-                                      this.$message({
-          showClose: true,
-          message: '登录成功',
+                                 this.$confirm('登录成功', '提示', {
+          confirmButtonText: '确定',
+        
           type: 'success'
-        });
+        }).then(() => {
+         
+          this.$router.push("/")
+        })
+        ;
                              }
                         })
                     })
+              },
+              changepassword(){
+                   this.$prompt('请输入邮箱地址', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          inputPattern: /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,
+          inputErrorMessage: '邮箱格式不正确',
+         
+        }).then(({ value }) => {
+          this.$message({
+            type: 'success',
+            message: '你的邮箱是: ' + value
+          });
+        }).catch(() => {
+          this.$message({
+            type: 'info',
+            message: '取消输入'
+          });       
+        });
               } 
          },
-        created(){
-               this.$route.password = this.passWord,
-               this.$route.email = this.userName
+        mounted(){
+            //  console.log(this.$route,111111)
+            this.passWord = this.$route.query.password 
+              this.userName = this.$route.query.email
          }
 }
 </script>
@@ -261,12 +285,16 @@ export default {
     color: #fff;
     border: 0;
   }
-  .go-right a {
+  .go-right .forget {
     color: #fff;
+     font-size: 24px;
   }
   .buttonwrap {
     text-align: center;
     margin-bottom: 34px;
+  }
+  .go-right .el-button{
+    line-height:0;
   }
   input::-webkit-input-placeholder {
     color: #fff;

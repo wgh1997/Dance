@@ -25,15 +25,23 @@
       <input type="text" placeholder="联系方式(QQ/微信)：" />
     </div>
     <div class="information">
-      <p>粉丝金卡</p>
-      <div class="in_form">
+      <p>选择支付方式</p>
+      <!-- <div class="in_form">
         <input type="text" placeholder="请填写卡号" />
         <div>
           <input type="text" placeholder="请填写验证号码" />
           <span class="yzm">获取验证码</span>
         </div>
         <button class="btn">使用</button>
-      </div>
+      </div> -->
+     
+       <div class="shoupaybox">
+          <!-- <div v-for="item in showpaylist" class="showpay"> -->
+            <div class="showpay">
+    <img src="../../../inconimg/zhifu.jpg" alt="">
+            </div>
+         
+       </div>
     </div>
     <div class="payment">
       <p class="total">合计金额：<span>520.0元</span></p>
@@ -46,9 +54,25 @@
 <script>
 //import footer from '../'
 import Footer from '../public/Footer.vue'
+
    
 export default {
          name:"cartvue",
+         data(){
+             return{
+                    // showpaylist:[
+                    //     {
+                    //          img:"../../../inconimg/zhifu.jpg"
+                    //     },
+                    //     {
+                    //          img:"../../../inconimg/weixin.jpg"
+                    //     },
+                    //     {
+                    //          img:"../../../inconimg/jd.jpg"
+                    //     }
+                    // ]
+             }
+         },
         components:{
              Footer,
             //  header
@@ -110,6 +134,9 @@ export default {
     margin-left: 343px;
     margin-top: 10px;
   }
+  .showpay{
+       float:left;
+  }
   .zf {
     margin-left: 350px;
   }
@@ -143,6 +170,9 @@ export default {
     font-size: 24px;
     line-height: 170px;
     float: left;
+  }
+  .showpaybox{
+       overflow: hidden;
   }
   .con .price {
     float: right;

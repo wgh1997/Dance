@@ -17,10 +17,10 @@
                 <p class="p3">结课事件 : 2019年8月21</p>
                 <p class="p4">选择班级 : <span class="p8">【第三期】质保期协议到2019年8月21</span></p>
                 <p class="p5">服务保障</p>
-                <div class="p6">质保期协议</div>
+                <div class="p6" @click="fn">质保期协议</div>
                 <div class="p7">退款协议</div>
                 <div class="line"></div>
-                <div class="buy">立即报名</div>
+                <div class="buy" @click="goshop">立即报名</div>
             </div>
 
 
@@ -35,7 +35,7 @@
                     </ul>
                 </div>
 
-                <div>
+                  <div>
                     <div class="square" v-show="tabId===0">
                     <p class="p9">0000</p>
                     <div class="imgs">
@@ -109,6 +109,15 @@
             Header,
             Footer
         },
+        methods:{
+             goshop(){
+                 console.log(111111111111111111111111111)
+                   this.$router.push("/cart")
+             },
+             fn(){
+                   console.log(1111111)
+             }
+        },
         mounted() {
             // let oLis = document.querySelectorAll(".list ul li");
             // for (let i = 0, len = oLis.length; i < len; i++) {
@@ -128,7 +137,7 @@
         },
     }
 </script>
-<style scoped>
+<style>
     * {
         margin: 0;
         padding: 0;
