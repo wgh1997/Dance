@@ -17,10 +17,10 @@
                 <p class="p3">结课事件 : 2019年8月21</p>
                 <p class="p4">选择班级 : <span class="p8">【第三期】质保期协议到2019年8月21</span></p>
                 <p class="p5">服务保障</p>
-                <div class="p6" @click="fn">质保期协议</div>
+                <div class="p6">质保期协议</div>
                 <div class="p7">退款协议</div>
                 <div class="line"></div>
-                <div class="buy" @click="goshop">立即报名</div>
+                <div class="buy" @click="$router.push('/cart')">立即报名</div>
             </div>
 
 
@@ -28,15 +28,17 @@
 
                 <div class="list">
                     <ul>
-                        <li  @click="tabId=0" :class ="{'bba':tabId==0}">课程详情</li>
-                        <li  @click="tabId=1" :class ="{'bba':tabId==1}">课程安排</li>
+                        <!-- <li  @click="fn" :class ="{'bba':tabId==0}">课程详情</li> -->
+                        <li v-for="(item,i) in showlist" :class="{'bba':i==index}" @click="fn(i)">{{item}}</li>
+                        <!-- <li  @click="tabId=1" :class ="{'bba':tabId==1}">课程安排</li>
                         <li  @click="tabId=2" :class ="{'bba':tabId==2}">报班答疑</li>
-                        <li  @click="tabId=3" :class ="{'bba':tabId==3}">学院评价(33)</li>
+                        <li  @click="tabId=3" :class ="{'bba':tabId==3}">学院评价(33)</li> -->
                     </ul>
                 </div>
 
                   <div>
-                    <div class="square" v-show="tabId===0">
+                      <components :is="template[index]"></components>
+                    <!-- <div class="square" v-show="tabId===0">
                     <p class="p9">0000</p>
                     <div class="imgs">
                     </div>
@@ -55,7 +57,7 @@
                                 <p class="p9">课程详情 444</p>
                                 <div class="imgs">
                                 </div>
-                            </div>
+                            </div> -->
                 </div>
                 
            <div class="the-one">第一期开班</div>
@@ -65,7 +67,7 @@
                 </div>
                 <div id="teacher">
                     <div class="detail">
-                        <p class="p12">王芳老师</p>
+                        <p class="p12">{{msg.teacherName}}</p>
                         <p class="p13">我这一生,唯独不能缺的就是舞蹈了</p>
                         <div class="img2"></div>
                     </div>
@@ -99,26 +101,56 @@
 <script>
     import Header from "../../components/public/Header.vue"; //头部
     import Footer from "../../components/public/Footer.vue"; //尾部
+    import lessondetail from '../../components/public/lessondetail.vue'
+     import lessonanswer from '../../components/public/lessonanswer.vue'
+      import lessonplan from '../../components/public/lessonplan.vue'
+      import appraise from '../../components/public/appraise.vue'
+      
+
     export default {
         data(){
             return{
+                showlist:[
+                      "课程详情",
+                      '课程安排',
+                      '报班答疑',
+                      '学院评价'
+                ],
+                index:0,
                 tabId:0,
+                // item:{}
+                id:"",
+                msg:{},
+
+                template:['lessondetail','lessonanswer','lessonplan','appraise']
             }
          },
         components: {
             Header,
-            Footer
+            Footer,
+            lessondetail,
+            lessonanswer,
+            lessonplan,
+            appraise
+
+
         },
         methods:{
-             goshop(){
-                 console.log(111111111111111111111111111)
-                   this.$router.push("/cart")
-             },
-             fn(){
-                   console.log(1111111)
+             fn(i){
+                 this.index = i
              }
+           
         },
         mounted() {
+            //console.log(this.$route.query.id)
+              this.id = this.$route.query.id
+              console.log(this.id)
+               this.$axios.get("./course/detail/"+this.id,{
+
+               }).then((data)=>{
+                    this.msg = data.detail
+                    console.log(this.msg)
+               })
             // let oLis = document.querySelectorAll(".list ul li");
             // for (let i = 0, len = oLis.length; i < len; i++) {
             //     oLis[i].onmouseover = oLis[i].onclick = function () {
@@ -400,8 +432,8 @@
         font-size: 22px;
         font-weight: 700;
         position: absolute;
-        left: 85px;
-        top: 90px;
+        left: 38px;
+        top: 70px;
     }
 
     #teacher .detail .p13 {

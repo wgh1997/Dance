@@ -1,5 +1,6 @@
 <template>
 <div>
+  <Header></Header>
   <div class="container">
     <div class="order">
       <div class="o_top">
@@ -38,14 +39,35 @@
        <div class="shoupaybox">
           <!-- <div v-for="item in showpaylist" class="showpay"> -->
             <div class="showpay">
-    <img src="../../../inconimg/zhifu.jpg" alt="">
+        <img src="../../../inconimg/zhifu.jpg" alt="">
             </div>
          
        </div>
     </div>
     <div class="payment">
       <p class="total">合计金额：<span>520.0元</span></p>
-      <button class="pri_btn">去付款</button>
+      <button class="pri_btn" @click="centerDialogVisible = true">去付款</button>
+  
+
+<el-dialog
+  title="购课温馨提示"
+  :visible.sync="centerDialogVisible"
+  width="50%"
+  height="50%"
+  center>
+  <span class="bodycontent">
+     <div class="spanwarp">
+       <h2>课程信息</h2>
+    <h3>婚礼私教课程</h3>
+    <p>本期课程2019.01.02结束，课程有效期至2022.1.22</p>
+     </div>
+  </span>
+  <span slot="footer" class="dialog-footer">
+   <p class="agree">请阅读完整内容后确认</p>
+    <el-button type="primary" @click="centerDialogVisible = false">我同意</el-button>
+  
+  </span>
+</el-dialog>
     </div>
   </div>
      <Footer></Footer>
@@ -54,28 +76,30 @@
 <script>
 //import footer from '../'
 import Footer from '../public/Footer.vue'
+import Header from "../public/Header.vue"
 
    
 export default {
          name:"cartvue",
          data(){
              return{
-                    // showpaylist:[
-                    //     {
-                    //          img:"../../../inconimg/zhifu.jpg"
-                    //     },
-                    //     {
-                    //          img:"../../../inconimg/weixin.jpg"
-                    //     },
-                    //     {
-                    //          img:"../../../inconimg/jd.jpg"
-                    //     }
-                    // ]
+                    showpaylist:[
+                        {
+                             img:"../../../inconimg/zhifu.jpg"
+                        },
+                        {
+                             img:"../../../inconimg/weixin.jpg"
+                        },
+                        {
+                             img:"../../../inconimg/jd.jpg"
+                        }
+                    ],
+                    centerDialogVisible: false
              }
          },
         components:{
              Footer,
-            //  header
+              Header
         }
 }
 </script>
@@ -84,6 +108,35 @@ export default {
   * {
     margin: 0;
     padding: 0;
+  }
+  
+.el-dialog .bodycontent{
+            display: block;
+            border:1px solid #ddd;
+            width:624px;
+            height:320px;
+            margin: 0 auto;
+  }
+  .agree{
+      padding-bottom:20px;
+      font-size:22px;
+      color:#595959;
+  }
+ .el-dialog__title{
+       font-size:36px;
+       line-height: 24px;
+    font-size: 33px;
+    color: #303133;
+   }
+  .bodycontent h2{
+       padding-bottom:20px;
+       padding-top:20px;
+  }
+  .spanwarp{
+      padding-left:40px;
+  }
+  .bodycontent h3{
+     padding-bottom:20px;
   }
   .container {
     padding: 11px;

@@ -49,8 +49,16 @@ export default{
                           },
                           
                       }).then(function(data){
-                          console.log(data)
+                          //console.log(data)
                       })
+            },
+            Findemali(context,obj){
+                 // console.log(1111111111111113333)
+                    axios.post("/sys/verificationCode",{
+                         email:obj.email
+                    }).then((data)=>{
+                    // console.log(data,2222222222222)
+                    })
             }
         }
         

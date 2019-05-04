@@ -101,8 +101,11 @@ export default {
         }).then(({ value }) => {
           this.$message({
             type: 'success',
-            message: '你的邮箱是: ' + value
+            message:"已提交您的邮箱地址,请到您的邮箱查收验证码"
           });
+            this.$store.dispatch("Findemali",{
+                    email:value
+            })
         }).catch(() => {
           this.$message({
             type: 'info',

@@ -34,13 +34,19 @@
                 </div>
                 <div class="Jazz_img">
                     <ul>
-                        <li @click="$router.push('/Course_Details')" style="cursor: pointer"><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
+                        <li @click="$router.push({
+                            path:'/Course_Details',
+                            query:{
+                                id:item.courseId
+                            }
+                        })
+                          
+                        " style="cursor: pointer" v-for="(item,index) in lessonlist ">
+                          <img :src="item.coverUrl" alt="">
+                        </li> 
+                       
                     </ul>
+                   
                 </div>
             </div>
             <div class="Jazz">
@@ -74,7 +80,23 @@ export default {
     components:{
         Header,
         Footer
-    }
+    },
+    data(){
+           return{
+                  lessonlist:[],
+                 
+                  
+           }
+    },
+    created() {
+              this.$axios.get("/cou/cou_tea",{
+
+              }).then((data)=>{
+                  console.log(data)
+                     this.lessonlist = data.courses
+                     
+              })
+    },
 }
 </script>
 <style scoped>
@@ -93,13 +115,13 @@ export default {
             margin:0 auto;
         }
         .courses{
-            width:100%px;
+            width:100px;
             height:580px;
             background: rebeccapurple;
         }
         .courses img{
             width:100%;
-            height:100%;
+           
         }
         .introduction{
             width:800px;
@@ -163,5 +185,9 @@ export default {
             width:270px;
             height:180px;
             margin:60px 100px 0 0;
+        }
+        .Jazz .Jazz_img ul li img{
+              width:100%;
+              height:100%;
         }
 </style>
